@@ -1,19 +1,19 @@
 public class Member implements java.lang.reflect.Member {
-    private String memberID;
+    private int memberID = 0 ;
     private String firstName;
     private String lastName;
 
-    public Member(String memberID, String firstName, String lastName) {
-        this.memberID = memberID;
+    public Member(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+        memberID++;
     }
 
-    public String getMemberID() {
+    public int getMemberID() {
         return memberID;
     }
 
-    public void setMemberID(String memberID) {
+    public void setMemberID(int memberID) {
         this.memberID = memberID;
     }
 
@@ -40,7 +40,7 @@ public class Member implements java.lang.reflect.Member {
 
     @Override
     public String getName() {
-        return null;
+        return getFirstName() + " " + getLastName();
     }
 
     @Override

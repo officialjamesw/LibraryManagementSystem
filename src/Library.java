@@ -63,5 +63,13 @@ public class Library {
         this.loans.remove(loan);
     }
 
-
+    //method to get all currentLoans
+    public void displayCurrentLoans(){
+        for(int i = 0;i<loans.size();i++){
+            System.out.println("Current Loans: ");
+            System.out.println("Name:" + loans.get(i).getMember().getName() + ", Title:" + 
+            loans.get(i).getBook().getTitle() + ", Issued:" + loans.get(i).getIssueDate());
+        }
+            
+    }
 }

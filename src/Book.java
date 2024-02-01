@@ -37,6 +37,18 @@ public class Book {
         return isbn;
     }
 
+    public double getPrice(){
+        return price;
+    }
+
+    public double getRating(){
+        return rating;
+    }
+
+    public String getGenre(){
+        return genre;
+    }
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -55,6 +67,10 @@ public class Book {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getDescription(){
+        return description;
     }
 
     public void setRating(double rating) {
